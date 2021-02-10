@@ -18,8 +18,6 @@ const EmployeeList = ({ isAcme }) => {
   } = useStateContext();
 
   const handleToggle = () => setIsOpen(!isOpen);
-
-  console.log(isOpen);
   return (
     <>
       {isAcme ? (
@@ -27,22 +25,30 @@ const EmployeeList = ({ isAcme }) => {
           <Text className="bold" variant="h6">
             Relação de Funcionários(as)
           </Text>
-          <EmployeesRelation className="acmeColor">
-            {acmeEmployees.map((employee) => {
-              return (
-                <EmployeesListItem key="{employee}">
-                  <Text variant="body1">{employee.name}</Text>
-                  <ButtonsContainer>
-                    <ListButtons onClick={() => handleToggle()}>
-                      Detalhes
-                    </ListButtons>
-                    <ListButtons className="editButtons">Editar</ListButtons>
-                    <ListButtons className="deleteButtons">Excluir</ListButtons>
-                  </ButtonsContainer>
-                </EmployeesListItem>
-              );
-            })}
-          </EmployeesRelation>
+          {acmeEmployees.length === 0 ? (
+            <EmployeesRelation className="acmeColor">
+              <Text variant="h6">Nenhum Funcionário cadastrado :(</Text>
+            </EmployeesRelation>
+          ) : (
+            <EmployeesRelation className="acmeColor">
+              {acmeEmployees.map((employee) => {
+                return (
+                  <EmployeesListItem key="{employee}">
+                    <Text variant="body1">{employee.name}</Text>
+                    <ButtonsContainer>
+                      <ListButtons onClick={() => handleToggle()}>
+                        Detalhes
+                      </ListButtons>
+                      <ListButtons className="editButtons">Editar</ListButtons>
+                      <ListButtons className="deleteButtons">
+                        Excluir
+                      </ListButtons>
+                    </ButtonsContainer>
+                  </EmployeesListItem>
+                );
+              })}
+            </EmployeesRelation>
+          )}
         </EmployeeListContainer>
       ) : (
         <EmployeeListContainer>

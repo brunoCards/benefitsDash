@@ -5467,6 +5467,11 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
+goober@^2.0.27:
+  version "2.0.30"
+  resolved "https://registry.yarnpkg.com/goober/-/goober-2.0.30.tgz#fb3034d904002bac17eb2be6a8f1f8daf72a4970"
+  integrity sha512-fVAgCTKFGWw1oBvUSAyLjZJBur/BUn5tmUSaGx5ryPddYJYNrCsvkzSoCnE1O8/5EiDK0UYbWilBUp44hKekRw==
+
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.4:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
@@ -9300,6 +9305,13 @@ react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
+react-multi-select-component@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/react-multi-select-component/-/react-multi-select-component-3.1.2.tgz#3f6e9026850ea1df096105bf3bcce71a67f9f726"
+  integrity sha512-PNmu7lSvvAdOgVaEOQe+16LWctdvNw2CF1SWcX9w73WUYqgTvSeXhiSSE+TgNBDGQl8xBXOLnbkXMa586kgjow==
+  dependencies:
+    goober "^2.0.27"
+
 react-refresh@^0.8.3:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
@@ -11244,7 +11256,7 @@ uuid@^3.3.2, uuid@^3.4.0:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^8.3.0:
+uuid@^8.3.0, uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
