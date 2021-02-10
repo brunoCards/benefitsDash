@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { FormProvider } from '../contexts/FormContext';
+import { StateProvider } from '../contexts/StateContext';
 import HomePage from '../screens/HomePage';
 import HRDashboardPage from '../screens/HRDashboardPage';
 import HRDashboardPageInclusion from '../screens/HRDashBoardPageInclusion';
@@ -8,7 +8,7 @@ import HRDashboardPageInclusion from '../screens/HRDashBoardPageInclusion';
 const Router = () => {
   return (
     <BrowserRouter>
-      <FormProvider>
+      <StateProvider>
         <Switch>
           <Route exact path="/">
             <HomePage />
@@ -26,7 +26,7 @@ const Router = () => {
             <HRDashboardPageInclusion />
           </Route>
         </Switch>
-      </FormProvider>
+      </StateProvider>
     </BrowserRouter>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
-import useLogin from '../../hooks/useLogin';
-import { useSelect } from '../../contexts/FormContext';
+import { useHistory } from 'react-router-dom';
+import schema from '../../schema/schema';
+import { useFormik } from 'formik';
 import {
   Form,
   Container,
@@ -12,9 +13,24 @@ import {
 import circuloscircles from '../../assets/circuloscircles.svg';
 import InputComponent from '../InputComponent';
 
-const HomeForm = ({ isLoginAcme }) => {
-  const [handleLogin] = useLogin();
-  const { form, handleChangeInput } = useSelect();
+const HomeForm = () => {
+  const history = useHistory();
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    validationSchema: schema,
+    onSubmit: (values) => {
+      if (values.email === 'rh@acme.com' && values.password === 'acme') {
+        history.push('/rh/acme');
+      }
+      if (values.email === 'rh@tpbank.com' && values.password === 'tpbank') {
+        history.push('/rh/tpbank');
+      }
+    },
+  });
+
   return (
     <>
       <HomeFormContainer>
@@ -31,23 +47,26 @@ const HomeForm = ({ isLoginAcme }) => {
             Faça o Login
           </Text>
         </Container>
-        <Form>
+        <Form onSubmit={formik.handleSubmit}>
           <InputComponent
+            id="email"
             name="email"
-            value={form.email}
-            onChange={handleChangeInput}
-            placeholder="Email"
+            label="E-mail"
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            error={formik.touched.email && Boolean(formik.errors.email)}
+            helperText={formik.touched.email && formik.errors.email}
           />
           <InputComponent
+            id="password"
             name="password"
-            value={form.password}
-            onChange={handleChangeInput}
-            placeholder="Senha"
+            label="Senha"
+            value={formik.values.password}
+            onChange={formik.handleChange}
+            error={formik.touched.password && Boolean(formik.errors.password)}
+            helperText={formik.touched.password && formik.errors.password}
           />
-
-          <LoginButton onClick={() => handleLogin(form.email, form.password)}>
-            login
-          </LoginButton>
+          <LoginButton type="submit">login</LoginButton>
         </Form>
       </HomeFormContainer>
     </>

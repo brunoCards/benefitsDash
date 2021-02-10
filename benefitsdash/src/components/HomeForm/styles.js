@@ -1,4 +1,4 @@
-import { Box, Button, FormControl, Typography } from '@material-ui/core';
+import { Box, Button, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 
 export const HomeFormContainer = styled.div`
@@ -46,18 +46,19 @@ export const Circles = styled.img`
 
   object-fit: fill;
 `;
-export const Form = styled(FormControl)`
+export const Form = styled.form`
   width: 80%;
   height: calc(100% - 400px);
 
   display: flex;
+  flex-direction: column;
+  gap: 10px;
   align-items: center;
-  gap: 20px;
 `;
 export const LoginButton = styled(Button)`
   && {
     width: 50%;
-    margin-top: 7vh;
+    margin-top: 25px;
 
     background-color: var(--pink);
 

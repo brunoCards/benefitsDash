@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelect } from '../../contexts/FormContext';
+import { useStateContext } from '../../contexts/StateContext';
 import {
   EmployeeListContainer,
   EmployeesRelation,
@@ -10,7 +10,12 @@ import {
 } from './styles';
 
 const EmployeeList = ({ isAcme }) => {
-  const { acmeEmployee, tpBankEmployee, isOpen, setIsOpen } = useSelect();
+  const {
+    acmeEmployees,
+    tpBankEmployees,
+    isOpen,
+    setIsOpen,
+  } = useStateContext();
 
   const handleToggle = () => setIsOpen(!isOpen);
 
@@ -23,7 +28,7 @@ const EmployeeList = ({ isAcme }) => {
             Relação de Funcionários(as)
           </Text>
           <EmployeesRelation className="acmeColor">
-            {acmeEmployee.map((employee) => {
+            {acmeEmployees.map((employee) => {
               return (
                 <EmployeesListItem key="{employee}">
                   <Text variant="body1">{employee.name}</Text>
@@ -45,7 +50,7 @@ const EmployeeList = ({ isAcme }) => {
             Relação de Funcionários(as)
           </Text>
           <EmployeesRelation className="tpBankColor">
-            {tpBankEmployee.map((employee) => {
+            {tpBankEmployees.map((employee) => {
               return (
                 <EmployeesListItem key="{employee}">
                   <Text variant="body1">{employee.name}</Text>

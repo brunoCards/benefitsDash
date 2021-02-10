@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../Header';
 import PlansList from '../PlansList';
-import InclusionForm from '../InclusionForm';
 import { MainContainer } from './styles';
 
 const MainAreaInclusion = ({ isAcme }) => {
