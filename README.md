@@ -52,6 +52,7 @@ This section should list any major frameworks that you built your project using.
 * [React-Router-Dom](https://reactrouter.com/web/guides/quick-start)
 * [React-Multi-Select-Component](https://www.npmjs.com/package/react-multi-select-component)
 * [UUID](https://github.com/uuidjs/uuid)
+* [Date-fns](https://date-fns.org/docs/)
 
 ## Iniciando localmente
 
