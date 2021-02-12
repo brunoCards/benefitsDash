@@ -58,7 +58,7 @@ Essa foi uma solução proposta no processo seletivo da empresa Pipo Saúde, ond
 
 Para iniciar o projeto é bem simples basta seguir os requisitos abaixo:
 
-### Pre-requisitos
+### Pré-requisitos
 
 Ter o npm ou o yarn instalado e rodar o respectivo comando
 * npm
