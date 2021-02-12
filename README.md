@@ -60,7 +60,7 @@ Para iniciar o projeto é bem simples basta seguir os requisitos abaixo:
 
 ### Pré-requisitos
 
-Ter o npm ou o yarn instalado e rodar o respectivo comando
+Ter o npm ou o yarn instalado e rodar os respectivos comandos
 * npm
   ```sh
   npm install
