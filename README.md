@@ -21,7 +21,7 @@
     <li>
       <a href="#about-the-project">Sobre o projeto</a>
       <ul>
-        <li><a href="#built-with">Linguagens e libs utilizadas</a></li>
+        <li><a href="#built-with">Linguagens libs utilizadas e wireframe</a></li>
       </ul>
     </li>
     <li>
@@ -40,7 +40,7 @@
 
 Essa foi uma solução proposta no processo seletivo da empresa Pipo Saúde, onde foi dado um formulário no qual havia problemas de validação dos campos e otimização no preenchimento do mesmo. Tendo em vista o provlema Foi proposta uma idéia onde, os campos de preenchimento obrigatório que são iguais para planos diferentes, utilizarão da mesma informação preenchida, foi feita uma lógica para renderizar condicionalmente de acordo com o plano selecionado e apenas os campos obrigatórios, sendo assim, mitigando as chances de erro no preenchimento, todos os campos estão com as suas informações validadas, ou seja não é permitido letra em campo numérico e vice-versa, somente são permitidos e-mails válidos e somente é premitida a criação de um funcionário com a condição de que todos os campos obrigatórios estejam preenchidos e haja ao menos a seleção de um plano.
 
-### Linguagens e libs utilizadas
+### Linguagens libs utilizadas e wirefram
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
@@ -53,6 +53,7 @@ This section should list any major frameworks that you built your project using.
 * [React-Multi-Select-Component](https://www.npmjs.com/package/react-multi-select-component)
 * [UUID](https://github.com/uuidjs/uuid)
 * [Date-fns](https://date-fns.org/docs/)
+* [Wireframe](https://www.figma.com/file/sUn1mod9c3qDzXTao4xQ00/Untitled?node-id=0%3A1)
 
 ## Iniciando localmente
 
