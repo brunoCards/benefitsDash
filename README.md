@@ -21,7 +21,7 @@
     <li>
       <a href="#about-the-project">Sobre o projeto</a>
       <ul>
-        <li><a href="#built-with">Linguagens libs utilizadas e wireframe</a></li>
+        <li><a href="#built-with">Linguagens libs e wireframe</a></li>
       </ul>
     </li>
     <li>
