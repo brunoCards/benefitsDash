@@ -20,7 +20,6 @@ const EmployeeDetails = ({ isAcme }) => {
     isOpen,
     setIsOpen,
   } = useStateContext();
-  console.log(acmeEmployees);
   const handleToggle = () => setIsOpen(!isOpen);
 
   return (
@@ -51,7 +50,7 @@ const EmployeeDetails = ({ isAcme }) => {
                     </EmployeeListItem>
                     {employee.plans.selected.map((plan) => {
                       return (
-                        <EmployeeListItem className="plan">
+                        <EmployeeListItem className="acmeplans">
                           {plan.value}
                         </EmployeeListItem>
                       );

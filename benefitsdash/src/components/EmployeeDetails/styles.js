@@ -50,77 +50,66 @@ export const EmployeeList = styled.ul`
 
   display: grid;
   gap: 10px;
-`;
-export const EmployeeListItem = styled.li`
-  width: 100%;
-  list-style: none;
 
-  &.healhtplan {
-    grid-column-start: 3;
-    grid-column-end: 4;
-  }
-  &.listtitle {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-
-    display: flex;
+  &.acmeplans {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
     align-items: center;
   }
-  &.dentalplan {
-    grid-column-start: 3;
-    grid-column-end: 4;
+`;
+export const EmployeeListItem = styled.li`
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+
+  &.acmeplans {
+    width: 60%;
+    padding: 3px;
+    border-radius: 8px;
+
+    grid-column: 3 / 4;
+    justify-content: center;
+
+    background-color: var(--purple);
+
+    color: var(--white);
+    font-weight: bold;
   }
-  &.mentalplan {
-    grid-column-start: 3;
-    grid-column-end: 4;
-  }
+
   &.employeename {
     margin-top: 10px;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
   }
   &.employeedocument {
     margin-top: 10px;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-column: 3 / 4;
+    grid-row: 5 / 6;
   }
   &.admitdate {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 6;
-    grid-row-end: 7;
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
   }
   &.weightheight {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 7;
-    grid-row-end: 8;
+    grid-column: 1 / 3;
+    grid-row: 7 / 8;
   }
   &.email {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 7;
-    grid-row-end: 8;
+    grid-column: 3 / 4;
+    grid-row: 7 / 8;
   }
   &.address {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 7;
-    grid-row-end: 8;
+    grid-column: 3 / 4;
+    grid-row: 7 / 8;
   }
   &.meditatedhours {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 6;
-    grid-row-end: 7;
+    grid-column: 3 / 4;
+    grid-row: 6 / 7;
   }
 `;
+
 export const AdjustLayoutBox = styled.div`
   width: 100%;
 `;

@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import { useStyles } from '../InputComponent/styles';
 import { useStateContext } from '../../contexts/StateContext';
 import inclusionAcmeFormSchema from '../../schema/inclusionAcmeFormSchema';
+import { v4 as uuidv4 } from 'uuid';
 
 import {
   FormContainer,
@@ -15,13 +16,7 @@ import InputComponent from '../InputComponent';
 import { useHistory } from 'react-router-dom';
 
 const InclusionForm = ({ isNorteEuropa }) => {
-  const {
-    selected,
-    acmeEmployees,
-    setAcmeEmployees,
-    tpBankEmployees,
-    setTpBankEmployees,
-  } = useStateContext();
+  const { selected, acmeEmployees, setAcmeEmployees } = useStateContext();
   const history = useHistory();
   const formik = useFormik({
     initialValues: {
@@ -36,6 +31,7 @@ const InclusionForm = ({ isNorteEuropa }) => {
     onSubmit: (values) => {
       if (selected.length > 0) {
         const newFormData = {
+          id: uuidv4(),
           name: formik.values.name,
           cpf: formik.values.cpf,
           admitDate: formik.values.admitDate,
@@ -45,7 +41,7 @@ const InclusionForm = ({ isNorteEuropa }) => {
           plans: { selected },
         };
 
-        setAcmeEmployees([...acmeEmployees, newFormData]);
+        setAcmeEmployees([...acmeEmployees].concat(newFormData));
         alert('O empregado foi cadastrado com sucesso!');
         return history.push('/rh/acme');
       }

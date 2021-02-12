@@ -17,9 +17,15 @@ const EmployeeList = ({ isAcme }) => {
     setIsOpen,
   } = useStateContext();
 
-  console.log(acmeEmployees);
-
-  const handleToggle = () => setIsOpen(!isOpen);
+  const handleShowEmployeeDetails = (id) => {
+    const findEmployee = acmeEmployees.findIndex(
+      (employee) => employee.id === id
+    );
+    if (findEmployee !== -1) {
+      setIsOpen(!isOpen);
+      return findEmployee;
+    }
+  };
   return (
     <>
       {isAcme ? (
@@ -38,7 +44,9 @@ const EmployeeList = ({ isAcme }) => {
                   <EmployeesListItem key="{employee}">
                     <Text variant="body1">{employee.name}</Text>
                     <ButtonsContainer>
-                      <ListButtons onClick={() => handleToggle()}>
+                      <ListButtons
+                        onClick={() => handleShowEmployeeDetails(employee.id)}
+                      >
                         Detalhes
                       </ListButtons>
                       <ListButtons className="editButtons">Editar</ListButtons>
@@ -63,7 +71,7 @@ const EmployeeList = ({ isAcme }) => {
                 <EmployeesListItem key="{employee}">
                   <Text variant="body1">{employee.name}</Text>
                   <ButtonsContainer>
-                    <ListButtons onClick={() => handleToggle()}>
+                    <ListButtons onClick={() => handleShowEmployeeDetails()}>
                       Detalhes
                     </ListButtons>
                     <ListButtons className="editButtons">Editar</ListButtons>
