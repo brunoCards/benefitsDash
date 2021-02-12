@@ -9,6 +9,9 @@ import {
   ListsContainer,
   AdjustLayoutBox,
 } from './styles';
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+import { parseISO } from 'date-fns/esm';
 
 const EmployeeDetails = ({ isAcme }) => {
   const {
@@ -17,7 +20,7 @@ const EmployeeDetails = ({ isAcme }) => {
     isOpen,
     setIsOpen,
   } = useStateContext();
-
+  console.log(acmeEmployees);
   const handleToggle = () => setIsOpen(!isOpen);
 
   return (
@@ -46,12 +49,13 @@ const EmployeeDetails = ({ isAcme }) => {
                     <EmployeeListItem className="listtitle">
                       <Text className="title">Planos vigentes</Text>
                     </EmployeeListItem>
-                    <EmployeeListItem className="healhtplan">
-                      {employee.plans.health}
-                    </EmployeeListItem>
-                    <EmployeeListItem className="dentalplan">
-                      {employee.plans.dental}
-                    </EmployeeListItem>
+                    {employee.plans.selected.map((plan) => {
+                      return (
+                        <EmployeeListItem className="plan">
+                          {plan.value}
+                        </EmployeeListItem>
+                      );
+                    })}
                     <EmployeeListItem className="employeename">
                       <Text variant="body1">
                         <span className="bold">Nome: </span>
@@ -67,7 +71,9 @@ const EmployeeDetails = ({ isAcme }) => {
                     <EmployeeListItem className="admitdate">
                       <Text variant="body1">
                         <span className="bold">Data de admissão: </span>
-                        {employee.admitdate}
+                        {format(parseISO(employee.admitDate), 'dd/MM/yyyy', {
+                          locale: ptBR,
+                        })}
                       </Text>
                     </EmployeeListItem>
                     <EmployeeListItem className="weightheight">
@@ -115,15 +121,9 @@ const EmployeeDetails = ({ isAcme }) => {
                     <EmployeeListItem className="listtitle">
                       <Text className="title">Planos vigentes</Text>
                     </EmployeeListItem>
-                    <EmployeeListItem className="healhtplan">
-                      {employee.plans.health}
-                    </EmployeeListItem>
-                    <EmployeeListItem className="dentalplan">
-                      {employee.plans.dental}
-                    </EmployeeListItem>
-                    <EmployeeListItem className="mentalplan">
-                      {employee.plans.mental}
-                    </EmployeeListItem>
+                    <EmployeeListItem className="healhtplan"></EmployeeListItem>
+                    <EmployeeListItem className="dentalplan"></EmployeeListItem>
+                    <EmployeeListItem className="mentalplan"></EmployeeListItem>
                     <EmployeeListItem className="employeename">
                       <Text variant="body1">
                         <span className="bold">Nome: </span>

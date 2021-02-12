@@ -1,21 +1,16 @@
 import React from 'react';
 import { useStateContext } from '../../contexts/StateContext';
-import { MainContainer, Form, SelectItem, Selector, Label } from './styles';
+import { MainContainer, Selector } from './styles';
 
-const PlansList = ({ isAcme, isInclusion }) => {
-  const {
-    acmePlans,
-    setAcmePlans,
-    tpBankPlans,
-    selected,
-    setSelected,
-  } = useStateContext();
+const PlansList = ({ isAcme }) => {
+  const { acmePlans, tpBankPlans, selected, setSelected } = useStateContext();
 
   return (
     <>
       {isAcme ? (
         <MainContainer>
           <Selector
+            className="acmecolor"
             options={acmePlans}
             value={selected}
             onChange={setSelected}
@@ -30,6 +25,7 @@ const PlansList = ({ isAcme, isInclusion }) => {
       ) : (
         <MainContainer>
           <Selector
+            className="tpbankcolor"
             options={tpBankPlans}
             value={selected}
             onChange={setSelected}

@@ -17,6 +17,8 @@ const EmployeeList = ({ isAcme }) => {
     setIsOpen,
   } = useStateContext();
 
+  console.log(acmeEmployees);
+
   const handleToggle = () => setIsOpen(!isOpen);
   return (
     <>

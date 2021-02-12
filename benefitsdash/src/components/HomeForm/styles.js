@@ -48,7 +48,6 @@ export const Circles = styled.img`
 `;
 export const Form = styled.form`
   width: 80%;
-  height: calc(100% - 400px);
 
   display: flex;
   flex-direction: column;

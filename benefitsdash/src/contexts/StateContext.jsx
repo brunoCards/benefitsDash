@@ -8,17 +8,17 @@ const acmePlansDefaultValues = [
     label: 'Plano de Saúde Norte Europa',
     value: 'Plano de Saúde Norte Europa',
   },
-  { value: 'Plano Dental Sorriso', label: 'Plano Dental Sorriso' },
+  { label: 'Plano Dental Sorriso', value: 'Plano Dental Sorriso' },
 ];
 const tpBankPlansDefaultValues = [
   {
-    value: 'Plano de Saúde Pampulha Intermédica',
     label: 'Plano de Saúde Pampulha Intermédica',
+    value: 'Plano de Saúde Pampulha Intermédica',
   },
-  { value: 'Plano Dental Sorriso', label: 'Plano Dental Sorriso' },
+  { label: 'Plano Dental Sorriso', value: 'Plano Dental Sorriso' },
   {
-    value: 'Plano de Saúde Mental Mente Sã, Corpo São',
     label: 'Plano de Saúde Mental Mente Sã, Corpo São',
+    value: 'Plano de Saúde Mental Mente Sã, Corpo São',
   },
 ];
 

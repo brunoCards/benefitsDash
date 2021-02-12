@@ -1,5 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { useStyles } from '../InputComponent/styles';
+
 import schema from '../../schema/schema';
 import { useFormik } from 'formik';
 import {
@@ -23,13 +25,16 @@ const HomeForm = () => {
     validationSchema: schema,
     onSubmit: (values) => {
       if (values.email === 'rh@acme.com' && values.password === 'acme') {
-        history.push('/rh/acme');
+        return history.push('/rh/acme');
       }
       if (values.email === 'rh@tpbank.com' && values.password === 'tpbank') {
-        history.push('/rh/tpbank');
+        return history.push('/rh/tpbank');
       }
+      alert('E-mail ou senha incorretos');
     },
   });
+
+  const classes = useStyles();
 
   return (
     <>
@@ -49,7 +54,7 @@ const HomeForm = () => {
         </Container>
         <Form onSubmit={formik.handleSubmit}>
           <InputComponent
-            id="email"
+            className={classes.root}
             name="email"
             label="E-mail"
             value={formik.values.email}
@@ -58,7 +63,7 @@ const HomeForm = () => {
             helperText={formik.touched.email && formik.errors.email}
           />
           <InputComponent
-            id="password"
+            className={classes.root}
             name="password"
             label="Senha"
             value={formik.values.password}

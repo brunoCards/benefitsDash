@@ -18,6 +18,7 @@ body, #root{
 
 :root{
   --white: #fffffc;
+  --black: #000001;
   --pink: #A91f6c;
   --purple: #8e44ad;
   --blue: #2980b9;
