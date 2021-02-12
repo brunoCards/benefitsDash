@@ -111,5 +111,5 @@ Ter o npm ou o yarn instalado e rodar o respectivo comando
   Bruno da Cruz Cardoso um Dev iniciante e sempre estudante.
   - [LinkedIn](https://www.linkedin.com/in/-bruno-cardoso-/)
   -  [Email](emailto:bruno.cards27@gmail.com) 
-  -  [Github]([emailto:bruno.cards27@gmail.com](https://github.com/brunoCards))
+  -  [Github](https://github.com/brunoCards)
 
