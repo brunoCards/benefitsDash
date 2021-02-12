@@ -12,7 +12,7 @@ import {
   LoginButton,
   Circles,
 } from './styles';
-import circuloscircles from '../../assets/circuloscircles.svg';
+import circles from '../../assets/circles.svg';
 import InputComponent from '../InputComponent';
 
 const HomeForm = () => {
@@ -45,7 +45,7 @@ const HomeForm = () => {
           </Text>
         </Container>
         <Container className="imagecontainer">
-          <Circles src={circuloscircles} />
+          <Circles src={circles} />
         </Container>
         <Container>
           <Text className="bold" variant="h4">
