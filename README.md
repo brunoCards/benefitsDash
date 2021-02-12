@@ -74,7 +74,7 @@ Ter o npm ou o yarn instalado e rodar os respectivos comandos
 
 ### Emails e senhas válidos
 
-1. Com o projeto rodando no localhost ou no link da  <a href="https://benefitsdash.netlify.app/">Demonstração</a> Utilize as seguintes informações para "login":
+1. Com o projeto rodando no localhost ou no link da  <a href="https://benefitsdash.netlify.app/">Demonstração</a> utilize as seguintes informações para "login":
    
 2. Emails válidos
    ```sh
