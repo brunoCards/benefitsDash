@@ -53,7 +53,7 @@ This section should list any major frameworks that you built your project using.
 * [React-Multi-Select-Component](https://www.npmjs.com/package/react-multi-select-component)
 * [UUID](https://github.com/uuidjs/uuid)
 * [Date-fns](https://date-fns.org/docs/)
-* [Wireframe](https://www.figma.com/file/sUn1mod9c3qDzXTao4xQ00/Untitled?node-id=0%3A1)
+* [Wireframe](https://www.figma.com/community/file/942070640178710148/benefitsdash)
 
 ## Iniciando localmente
 
